@@ -5,6 +5,7 @@
   "version": "0.1.0",
   "author": "Kyle Mathews <mathews.kyle@gmail.com>",
   "dependencies": {
+    "@reach/router": "^1.2.1",
     "gatsby": "^2.15.24",
     "gatsby-plugin-react-helmet": "^3.1.8",
     "gatsby-plugin-typescript": "^2.1.9",
@@ -13,6 +14,7 @@
     "react-helmet": "^5.2.1"
   },
   "devDependencies": {
+    "@types/reach__router": "^1.2.5",
     "@types/react-helmet": "^5.0.10",
     "prettier": "^1.18.2"
   },
