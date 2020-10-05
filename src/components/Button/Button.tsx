@@ -1,4 +1,4 @@
-import React, { FC } from "react"
+import React, { FunctionComponent } from "react"
 import "./button.css"
 
 export interface ButtonProps {
@@ -27,13 +27,13 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button: FC<ButtonProps> = ({
+export const Button: FunctionComponent<ButtonProps> = ({
   primary = false,
   size = "medium",
   backgroundColor,
   label,
   ...props
-}) => {
+}: ButtonProps) => {
   const mode = primary
     ? "storybook-button--primary"
     : "storybook-button--secondary"

@@ -1,17 +1,16 @@
-import React, { useState, useEffect } from "react"
+import React, { useState, useEffect, FC } from "react"
 import { RouteComponentProps } from "@reach/router"
 
-interface Props
-  extends RouteComponentProps<{
-    results: string
-  }> {}
+type Props = RouteComponentProps<{
+  results: string
+}>
 
-export const RandomPerson: React.FC<Props> = ({ results = 1 }) => {
+export const RandomPerson: FC<Props> = ({ results = 1 }) => {
   const [person, setPerson] = useState()
   useEffect(() => {
     fetch(`https://randomuser.me/api?results=${results}`)
-      .then(x => x.json())
-      .then(x => setPerson(x))
+      .then((x) => x.json())
+      .then((x) => setPerson(x))
   }, [results])
 
   return (

@@ -6,22 +6,23 @@
  */
 
 import { graphql, useStaticQuery } from "gatsby"
-import React from "react"
+import React, { FunctionComponent } from "react"
 import Helmet from "react-helmet"
 
 interface Props {
   description?: string
   lang?: string
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   meta?: any[]
   title: string
 }
 
-const SEO: React.FC<Props> = ({
+const SEO: FunctionComponent<Props> = ({
   description = "",
   lang = "en",
   meta = [],
   title,
-}) => {
+}: Props) => {
   const { site } = useStaticQuery(
     graphql`
       query {
