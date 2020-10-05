@@ -3,6 +3,6 @@ import { storiesOf } from "@storybook/react"
 
 import Header from "./Header"
 
-const story = storiesOf("Components|Header", module)
+const story = storiesOf("Components/Header", module)
 
-story.add("Header Component", () => <Header siteTitle={"sample"} />)
+story.add("Header", () => <Header siteTitle={"sample"} />)
